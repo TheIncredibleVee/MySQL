@@ -1,0 +1,13 @@
+					MYSQL Answers
+
+1) select Bill.Cust_id,Client.Cust_name,Bill.item,Bill.qty,Bill.price,qty*Price as Bill_Amount from Bill,Client where Bill.Cust_id=Client.Cust_id;
+2) select count(*)  from Bill where Ord_date like "%03%" and Item="Pizza";
+3)select count(*) from Bill where qty*Price>1700;
+4) select Cust_name, City from Client Order by City;
+5) Update Bill set Price=500.00 where Item="Pizza";
+6)select count(*), City from Client GROUP BY City;
+7) select Item, count(Item) as cnt from Bill group by item having cnt<2;
+8)select * from Bill where Ord_date<"2014-01-01";
+9)select Distinct Item from Bill where Price>200 and Price<300;
+10)select Cust_name from Client where Cust_name like "A%";
+
